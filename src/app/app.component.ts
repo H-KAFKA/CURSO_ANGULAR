@@ -3,19 +3,16 @@ import { RouterOutlet } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { ContadorComponent } from './contador/contador.component';
+import { BuclesComponent } from "./bucles/bucles.component";
 
-@NgModule({
-  declarations: [ContadorComponent],
-  exports: [ContadorComponent],
-})
 export class ContadorModule {}
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, ContadorComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [RouterOutlet, ContadorComponent, BuclesComponent]
 })
 export class AppComponent {
   title = 'Curso_Angular';
